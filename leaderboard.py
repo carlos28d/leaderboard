@@ -9,6 +9,7 @@ data = pd.read_csv(sheet_url)
 
 # Sort by points
 data = data.sort_values("Points", ascending=False).reset_index(drop=True)
+data.index = data.index + 1
 
 # Display leaderboard
 st.title("🏆 Tournament Leaderboard 🏆")
